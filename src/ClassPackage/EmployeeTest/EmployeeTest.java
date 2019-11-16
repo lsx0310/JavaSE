@@ -1,8 +1,9 @@
 package ClassPackage.EmployeeTest;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import org.jetbrains.annotations.NotNull;
+
+
+import java.util.*;
 
 /**
  * @ClassName EmployeeTest
@@ -27,6 +28,8 @@ public class EmployeeTest {
 //        a[1] = new Employee("Harry Hacker",50000,1989,10,1);
 //        a[2] = new Employee("Tony Tester",40000,1992,3,2);
 
+        Collections.sort(staff);
+
         for (Employee e : staff){
             e.raiseSalary(5);
         }
@@ -37,7 +40,7 @@ public class EmployeeTest {
     }
 }
 
-class Employee{
+class Employee implements Comparable<Employee>{
     private String name;
     private double salary;
     private Date hireDay;
@@ -68,5 +71,11 @@ class Employee{
     public void raiseSalary(double byPercent){
         double raise = salary * byPercent /100;
         salary += raise;
+    }
+
+
+    @Override
+    public int compareTo(@NotNull Employee o) {
+        return Double.compare(this.salary,o.salary);
     }
 }
