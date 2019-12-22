@@ -1,6 +1,5 @@
 package ClassPackage.InnerClass;
 
-import sun.util.resources.TimeZoneNames_zh_TW;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

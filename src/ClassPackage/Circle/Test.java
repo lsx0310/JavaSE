@@ -32,7 +32,6 @@ public class Test {
                 maxarea = r.Area();
             }
         }
-
         return maxarea;
     }
 }

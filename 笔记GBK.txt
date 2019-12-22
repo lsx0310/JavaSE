@@ -1,0 +1,60 @@
+Map存储数据的特点
+键值对
+key  无序的 不可重复的  用Set存储
+value  无序的，可重复的 用Collection存储
+entry  无序的，不可重复的  用Set存储
+Map常用实现类
+HashMap     线程不安全，效率高
+
+   LinkedHashMap
+TreeMap
+
+Hashtable   线程安全的
+   properties
+
+
+Collection 和 Collections
+Collections 操作Collection和Map的工具类
+XXX
+XXXS   ----  >    工具类命名
+
+如何遍历Map 使用泛型
+Map<K,V> map = new Map<>();
+Set<Entry<K,V>> entry = map.entry();
+Set<K> set1 = entry.getKey();
+Collection<V> cl = entry.getvalue();
+
+写出使用Itertor和增强for循环遍历List<String> 使用泛型
+List<String> list = new List<>();
+Itertor<String> itertor = list.itertor():
+while(itertor.hasNext()){
+	System.out.println(itertor.next());
+}
+for(String s : list){
+	System.out.println(s);
+}
+
+提供一个方法，用于遍历获取HashMap<String,String>中所有的value,并存放在List中返回，考虑泛型
+public List<String> getMapValues(Map<String,String> map){
+	
+	List<String> list = new ArrayList<>();
+	Collection<String> cl = map.values();
+	for (String s : cl){
+		list.add(s);
+	}
+	return list;	
+}
+
+
+创建一个与a.txt 同目录的 b.txt
+
+public void createfile(File filepath,String newFileName){
+	File parentFile = filepath.getParent();
+	File newFile = new File(parentFile,newFileName);
+	newFile.createNewFile();
+}
+
+Map 接口中常用的方法有哪些：
+
+
+
