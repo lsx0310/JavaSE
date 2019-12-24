@@ -78,6 +78,16 @@ IO 流的分类
     抽象基类      	字节流            字符流
 	 输入流          InputStream       Reader
 	 输出流          OutputStream      Writer
+	 
+	 
+NIO2  JDK1.7 文件操作
+
+
+TCP/IP 
+应用层                   HTTP FTP Telnet DNS  ...
+传输层                   TCP  UDP ...
+连接层                   IP ICMP ARP ...
+链路层+物流层            Link
 
 
 
